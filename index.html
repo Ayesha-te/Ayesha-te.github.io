@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayesha | AI Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.5s ease;
+    }
+
+    header p {
+      font-size: 1.3rem;
+    }
+
+    .about, .projects, .contact {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about h2, .projects h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #fff;
+      color: #1f4037;
+    }
+
+    .contact p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .contact-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: slideIn 0.5s ease forwards;
+    }
+
+    .contact-links a:nth-child(1) { animation-delay: 0.2s; }
+    .contact-links a:nth-child(2) { animation-delay: 0.4s; }
+    .contact-links a:nth-child(3) { animation-delay: 0.6s; }
+    .contact-links a:nth-child(4) { animation-delay: 0.8s; }
+
+    .contact-links a:hover {
+      background-color: #fff;
+      color: #2c5364;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-aos="fade-down">Ayesha Jahangir</h1>
+    <p data-aos="fade-up">Python Developer | AI Enthusiast</p>
+  </header>
+
+  <section class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm Ayesha, a Python developer and AI enthusiast on a journey to build impactful, intelligent applications. I specialize in developing AI-powered tools using LangChain and OpenAI, with a growing portfolio of innovative Streamlit apps. My passion lies in exploring the intersection of machine learning and practical problem-solving.
+    </p>
+  </section>
+
+  <section class="projects">
+    <h2 data-aos="zoom-in">My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Resume Screener</h3>
+        <p>Automatically screens and ranks resumes based on job descriptions using OpenAI. Useful for HR and recruiters.</p>
+        <a href="https://ayeshajahangir-ai-resume-screener.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Code Review Bot</h3>
+        <p>Reviews code and gives suggestions, improvements, and a quality score. Great for developers and code teams.</p>
+        <a href="https://ayeshajahangir-ai-code-review-bot.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Customer Support Chatbot</h3>
+        <p>Smart chatbot that answers customer FAQs and general queries. Helps reduce manual support tasks.</p>
+        <a href="https://ayeshajahangir-ai-customer-support-chatbot.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Trading Assistant</h3>
+        <p>Provides real-time stock market insights and analysis. Useful for traders and finance analysts.</p>
+        <a href="https://ayeshajahangir-ai-trading-assistant.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI PDF Search Assistant</h3>
+        <p>Lets users ask questions from PDFs using LangChain + OpenAI. Saves time reading long documents.</p>
+        <a href="https://ayeshajahangir-pdf-search-assistant.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Research Assistant</h3>
+        <p>Answers research-based queries using Google Search and LLMs. Designed for students and researchers.</p>
+        <a href="https://ayeshajahangir-ai-research-assistant.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Interview Prep Coach</h3>
+        <p>Simulates interview questions and evaluates answers. Perfect for job seekers and students.</p>
+        <a href="https://ayeshajahangir-ai-interview-prep-coach.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>AI Code Explainer</h3>
+        <p>Explains code line-by-line using OpenAI. Great for learning, debugging, or documentation.</p>
+        <a href="https://ayeshajahangir-ai-code-explainer.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Multi-Agent AI Assistant</h3>
+        <p>Combines multiple AI agents to answer complex queries. A powerful tool for multi-step tasks.</p>
+        <a href="https://ayeshajahangir-multi-agent-assistant.streamlit.app" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" data-aos="zoom-in">
+        <h3>Prompt Engineering Playground</h3>
+        <p>Test and tweak prompts in real-time to learn prompt engineering. Built using OpenAI API and Streamlit.</p>
+        <a href="https://ayeshajahangir-prompt-engineering-playground.streamlit.app" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a href="mailto:ayeshajahangir@example.com">📧 Email</a>
+      <a href="https://github.com/Ayesha-te" target="_blank">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/ayesha-jahangirrr-083327365/" target="_blank">🔗 LinkedIn</a>
+      <a href="tel:+923144217577">📞 Call</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ayesha Jahangir. Built with 💻 and ☕.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>
